@@ -23,3 +23,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('port_home.urls')),
 ]
+# git remote set-url origin https://ARNab-Mannna@github.com/ARNab-Mannna/portfoio.git
