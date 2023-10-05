@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6onm--wowtm=h#8lat9mx_39t#3wir5kf08uk89^&!3j!o36rq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['arnabmanna.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -124,7 +124,17 @@ USE_TZ = True
 #     os.path.join(BASE_DIR,"static")
 # ]
 
-STATIC_URL = '/static'
+STATIC_URL = '/static/'
+STATIC_ROOT= os.path.join(BASE_DIR,'staticfiles')
+
+
+STATICFILES_DIR= {
+    os.path.join(BASE_DIR, "static")
+}
+
+
+# MEDIA_ROOT= os.path.join(BASE_DIR,'media')
+# MEDIA_URL = '/media/'
 
 
 

@@ -15,12 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from django.conf import settings
-from django.conf.urls.static import static
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+# from django.conf import settings
+# from django.conf.urls.static import static
+# from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
+admin.site.site_header ='My website ADMIN'
+admin.site.site_title ='This is admin portal'
+admin.site.index_title ='Hello there '
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('port_home.urls')),
+    path('dex',include('port_home.urls')),
+    path('contact',include('port_home.urls')),
+    # path('download',include('port_home.urls'))
 ]
-# git remote set-url origin https://ARNab-Mannna@github.com/ARNab-Mannna/portfoio.git
+# git remote set-url origin https://ARNab-Mannna@github.com/
